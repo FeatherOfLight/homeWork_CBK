@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gzf="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/openmenu"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/activity_cbk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.gzf.homework_cbk.CBKActivity">
+
+        <LinearLayout
+            android:id="@+id/tabs_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                gzf:tabIndicatorColor="#31ef07"
+                gzf:tabMode="fixed"
+                gzf:tabSelectedTextColor="#31ef07"
+                gzf:tabTextColor="#000000"></android.support.design.widget.TabLayout>
+
+            <ImageView
+                android:id="@+id/open_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/more"/>
+
+        </LinearLayout>
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent" android:layout_height="2dp"
+              android:layout_below="@id/tabs_linear" android:background="#31ef07"/>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/line"
+        >
+        </android.support.v4.view.ViewPager>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rightmenu"
+        android:layout_width="320dp"
+        android:clickable="true"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="茶百科"
+                android:textSize="28sp"/>
+
+            <ImageView
+                android:id="@+id/menu_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/searchbackbtn"/>
+
+            <ImageView
+                android:id="@+id/gohome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/righttopbutton"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:background="#31ef07"/>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/edit_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@mipmap/myedit"
+                android:drawableLeft="@mipmap/searchico"
+                android:hint="关键字"/>
+
+            <ImageView
+                android:id="@+id/image_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/gosearch"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/hotsearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="热门搜索：茶"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/shoucangjia"
+            android:paddingLeft="5dp"
+            android:text="收藏夹"/>
+
+        <TextView
+            android:id="@+id/myshoucang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:text="我的收藏"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/lishijilu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:text="历史数据"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/shoucangjia"
+            android:paddingLeft="5dp"
+            android:text="关于客户端"/>
+
+        <TextView
+            android:id="@+id/banquan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:text="版权信息"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/yijian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:text="意见反馈"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/denglu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:text="用户登录"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tuichu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:text="退出登录"
+            android:textSize="20sp"/>
+
+
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

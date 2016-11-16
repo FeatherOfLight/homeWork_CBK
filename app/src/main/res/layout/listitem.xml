@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/list_image"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:src="@mipmap/empty"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/list_image"
+        android:layout_margin="10dp"
+        android:layout_toLeftOf="@id/list_image"
+        android:layout_alignParentLeft="true"
+        android:text="认识辣鸡陈白帆"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_margin="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/list_image"
+        android:textSize="14sp"
+        android:text="认识辣鸡陈白帆"
+        android:textColor="#303030"
+    />
+</RelativeLayout>
